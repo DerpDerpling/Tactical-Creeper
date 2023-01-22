@@ -1,0 +1,39 @@
+{
+	"schemaVersion": 1,
+	"id": "tacticalcreeper",
+	"version": "1.0",
+	"name": "Tactical Creeper",
+	"description": "Adds a 'innocent' baby creeper that's totally not a tactical nuke",
+	"authors": [
+		"DerpDerpling"
+	],
+	"contact": {
+		"homepage": "https://modrinth.com/mod/tactical-creeper/",
+		"source": "https://github.com/DerpDerpling/tactical-creepers"
+	},
+	"license": "MIT License",
+	"icon": "assets/tacticalcreeper/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"derp.tacticalcreeper.TacticalCreeper"
+		],
+		"client": [
+			"derp.tacticalcreeper.TacticalCreeperClient"
+		]
+	},
+	"mixins": [
+		"tacticalcreeper.mixins.json",
+		{
+			"config": "tacticalcreeper.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.14.12",
+		"minecraft": "1.19.*",
+		"java": ">=17",
+		"fabric-api": "*",
+		"geckolib": "3.1.38"
+	}
+}
